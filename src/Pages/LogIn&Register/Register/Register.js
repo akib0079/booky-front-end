@@ -5,6 +5,7 @@ import './Register.css';
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogIns from '../SocialLogIns/SocialLogIns';
+import logo from '../../../images/my-booky logo.png'
 
 const Register = () => {
     const [c_error, setC_error] = useState();
@@ -54,15 +55,13 @@ const Register = () => {
 
     return (
         <div className='logInPage'>
-            <div className="logInInner">
+            <div className="logInInner text-center">
                 <div className="container-fluid g-0">
                     <div className="row g-0 d-flex align-items-center">
-                        <div className="col-md-5">
-                        </div>
-                        <div className="col-md-7">
+                        <div className="col-md-12">
                             <div className="loginInner">
-                                <h4 className='a_header'>Welcome to my-booky</h4>
-                                <h2 className='a_title'>Register Here</h2>
+                                <img className='logImg' src={logo} alt="" />
+                                <h4 className='i_header'>Welcome to My-Booky</h4>
                                 <Form onSubmit={handleRegister} className='mt-4'>
                                     <Row>
                                         <Form.Group className="mb-3" controlId="formGroupName">
@@ -91,8 +90,6 @@ const Register = () => {
                                 </Form>
 
                                 <div className="socials m-0">
-                                    <hr></hr>
-                                    <p className='mb-1 p_socials'>Or Continue With Socials</p>
                                     <SocialLogIns></SocialLogIns>
                                 </div>
 

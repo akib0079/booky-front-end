@@ -50,7 +50,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0,0,0,.55);
+    color: rgba(0, 0, 0, 0.749);
     font-size: 18px;
     font-weight: 500;
     margin-left: 23px;
@@ -66,14 +66,6 @@
     position: relative;
 }
 
-.logIn:before{
-    content: '';
-    height: 30px;
-    background-color: #39394323;
-    width: 2px;
-    margin: 0px 20px 0px -5px;
-}
-
 .logIn box-icon{
     margin-right: 8px;
     margin-top: 2px;
@@ -84,14 +76,6 @@
     display: flex;
     position: relative;
     cursor: pointer;
-}
-
-.logOut:before{
-    content: '';
-    height: 30px;
-    background-color: #39394323;
-    width: 2px;
-    margin: 0px 20px 0px -5px;
 }
 
 .logOut box-icon{

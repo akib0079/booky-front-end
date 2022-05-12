@@ -1,14 +1,19 @@
 .logInPage{
     padding: 80px 0px 100px 0px;
+    position: relative;
+    background-color: #FFF8F2;
+    min-height: 82vh;
 }
 
 .logInInner{
-    max-width: 1040px;
+    max-width: 600px;
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 0px;
+    background-color: white;
+    z-index: 10;
 }
 
 .logInImg{
@@ -17,33 +22,40 @@
     object-fit: cover;
 }
 
+.logImg{
+    width: 45%;
+    margin-bottom: 20px;
+}
+
 
 .loginInner{
-    padding: 60px;
+    padding: 70px 50px 50px 50px;
     margin-top: -30px;
 }
 
 .LogInBtn{
     padding: 8px 25px;
     font-size: 17px;
-    background-color: #fd6952;
+    background-color: #b53e30;
     border-radius: 3px;
     color: rgba(255, 255, 255, 0.943);
     font-weight: 500;
-    border: 2px solid #fd6952;
+    border: 2px solid #ce4c3d;
     transition: 0.3s linear;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .LogInBtn:hover{
-    background-color: #f8563d;
+    background-color: #b6200f;
 }
 
 .registerP{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .registerP span{
-    color: #FD6952;
+    color: #CA2516;
     text-decoration: none;
     cursor: pointer;
 }
@@ -55,4 +67,11 @@
 
 .resetPass{
     color: #0d0d0d !important;
+}
+
+.i_header{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #393943;
 }

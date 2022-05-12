@@ -4,11 +4,16 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogIns from '../SocialLogIns/SocialLogIns';
+import logo from '../../../images/my-booky logo.png';
 import './Login.css';
+import Header from '../../../Static/Header/Header';
 
 const LogIn = () => {
 
     const [c_errors, setC_errors] = useState('');
+
+
+
 
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -59,13 +64,11 @@ const LogIn = () => {
             <div className="logInInner">
                 <div className="container-fluid g-0">
                     <div className="row g-0 d-flex align-items-center">
-                        <div className="col-md-5">
-                        </div>
-                        <div className="col-md-7">
+                        <div className="col-md-12 text-center">
                             <div className="loginInner">
-                                <h4 className='a_header'>Welcome to my-booky</h4>
-                                <h2 className='a_title'>LogIn Here</h2>
-                                <h2 className='a_title'>{c_errors}</h2>
+                                <img className='logImg' src={logo} alt="" />
+                                <h4 className='i_header'>Welcome to My-Booky</h4>
+                                <SocialLogIns></SocialLogIns>
                                 <Form onSubmit={handleLogIn} className='mt-4'>
                                     <Row>
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
@@ -101,12 +104,7 @@ const LogIn = () => {
                                         <span className='resetPass' onClick={resetPassword}> Reset Password?</span>
                                     </p>
                                 </Form>
-                                <div className="socials m-0">
-                                    <hr></hr>
-                                    <p className='mb-1 p_socials'>Or Continue With Socials</p>
-                                    <SocialLogIns></SocialLogIns>
-                                </div>
-
+                                <h2 className='a_title'>{c_errors}</h2>
                             </div>
                         </div>
                     </div>

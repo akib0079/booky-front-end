@@ -16,14 +16,15 @@ import RequireAuth from './Pages/LogIn&Register/RequireAuth/RequireAuth';
 function App() {
   return (
     <div className="App">
+
       <Header></Header>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        {/* Protacted */}
-        <Route path="/checkout" element={
+        <Route path="/verify" element={
           <RequireAuth>
+            <VerfPage></VerfPage>
           </RequireAuth>
         } />
         <Route path="/login" element={<Login />} />

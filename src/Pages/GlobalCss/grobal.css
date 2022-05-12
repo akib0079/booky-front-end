@@ -18,29 +18,6 @@
 /* Mobile Responsiveness */
 
 @media (max-width: 767px) {
-
-    .topBtn{
-        display: none !important;
-    }
-  
-    .allServices{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        gap: 25px;
-    }
-
-    .logInImg {
-        width: 100%;
-        height: 237px !important;
-        object-fit: cover;
-    }
-    .loginInner {
-        padding: 55px 35px 45px 35px !important;
-        margin-top: -30px;
-    }
-    .logInPage {
-        padding: 20px 20px 20px 20px !important;
-    }
     .navbar-light .navbar-toggler {
         color: rgba(0,0,0,.55);
         border-color: rgb(0 0 0 / 10%) !important;
@@ -52,37 +29,6 @@
         text-decoration: none;
         outline: 0;
         box-shadow: 0 0 0 0rem !important;
-    }
-
-    .HeroSecInner h1 {
-        font-family: 'Satisfy', cursive;
-        font-size: 65px !important;
-        color: #ff7c67;
-        text-shadow: 3px 3px 3px rgb(0 0 0 / 70%);
-    }
-    .HeroSecInner h2 {
-        font-size: 22px !important;
-    }
-    .heroSec {
-        min-height: 65vh !important;
-    }
-
-    .contact_info{
-        display: none;
-    }
-
-    .userName p{
-        text-align: center !important;
-        width: 100% !important;
-        padding: 10px 0px !important;
-    }
-
-    .serviceInfo {
-        padding: 15px !important;
-    }
-
-    .a_img {
-        height: 400px !important;
     }
 
 }  

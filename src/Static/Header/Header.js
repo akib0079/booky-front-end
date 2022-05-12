@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import logo from '../../images/my-booky logo.png';
 import './Header.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Dropdown } from 'bootstrap';
 
 
 const Header = () => {
@@ -37,20 +38,22 @@ const Header = () => {
                                 <Link className="nav-link" to={'/blog'}>Blog</Link>
                             </li>
                             <li className="nav-item">
+
                                 <div className='verify'>
                                     {user?.email ?
                                         <div className="nav-link logOut">
-                                            <box-icon className="userIcn" name='log-in-circle' color='#928773'></box-icon>
+                                            <box-icon className="userIcn" type='solid' name='log-in-circle' color='#CA2517'></box-icon>
                                             <p onClick={logout}>Logout</p>
                                         </div>
                                         :
                                         <Link className="nav-link logIn" to={'/login'}>
-                                            <box-icon className="userIcn" name='user' color='#928773' ></box-icon>
+                                            <box-icon type='solid' className="userIcn bx-md" name='user-circle' color='#CA2517'></box-icon>
                                             <p>Log or Register</p>
                                         </Link>
                                     }
                                 </div>
                             </li>
+
                         </ul>
                     </Navbar.Collapse>
                 </Container>

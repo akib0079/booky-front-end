@@ -1,10 +1,28 @@
 .socialLogBtn{
-    background-color: #E8604C;
+    background-color: #fdfdfd;
     border: none;
-    padding: 10px 10px 5px 10px;
-    border-radius: 50%;
+    color: #0E0E0F;
+    padding: 10px 30px;
+    border-radius: 5px;
     margin-right: 10px;
     margin-top: 5px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.socialLogBtn:hover{
+    background-color: #f5f5f5;
+    border: none;
+    color: #0E0E0F;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 5px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.g_logo{
+    width: 30px;
+    margin-right: 10px;
 }
 
 .p_socials{
