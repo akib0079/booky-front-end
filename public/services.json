@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0",
+        "s_name": "Discover Cox's-Bazar",
+        "rating": 4.5,
+        "price": 8000,
+        "img": "./Pub_img/longest-sea-beach-in.webp",
+        "s_info": "Lets travel Cox's-Bazar, with travel mania, 150 km (93 mi) south of the city of Chittagong. Cox's Bazar is also known by the name Panowa, which translates literally as yellow flower. Another old name was Palongkee..."
+    },
+    {
+        "id": "1",
+        "s_name": "Discover Bandarban",
+        "rating": 4.8,
+        "price": 7000,
+        "img": "./Pub_img/y8eC0WBzPEEVyKIGGjcM3zKIgirEYLTLvioF3GaP.webp",
+        "s_info": "a part of the Chittagong Division. It is one of the three hill districts of Bangladesh and a part of the Chittagong Hill Tracts, the others being Rangamati District and Khagrachhari District..."
+    },
+    {
+        "id": "2",
+        "s_name": "Discover Sylhet",
+        "rating": 4.3,
+        "price": 5000,
+        "img": "./Pub_img/sltyr.webp",
+        "s_info": "Sylhet is well known for its natural beauty and amazing glorious history, the city is famous among the locals and foreign tourists. Beside of tea gardens, there are lots of attractions in Sylhet like Tambil, Jaflong, Ratargul water lake, Bholaganj etc..."
+    }
+]

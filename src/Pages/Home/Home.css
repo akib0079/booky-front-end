@@ -1,0 +1,50 @@
+.heroSec{
+    background-color: #FFF8F2;
+}
+
+.HeroSecInner h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 600;
+    color: #0E0E0F;
+    line-height: 75px;
+    margin-bottom: 20px;
+}
+
+.HeroSecInner h1 span{
+    color: #bb2719;
+    font-weight: 700;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.HeroBtn{
+    background-color: #0E0E0F;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.HeroBtn:hover{
+    background-color: #ca2516;
+    color: white;
+    transition: 0.5s;
+}
+
+.HeroBtn2{
+    background-color: #ca2516;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.HeroBtn2:hover{
+    background-color: #ca2516;
+    color: white;
+    transition: 0.5s;
+}

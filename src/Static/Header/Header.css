@@ -1,0 +1,100 @@
+.top-header{
+    background-color: #393943;
+    color: #9B9D9D;
+    font-weight: 500;
+}
+
+.topbarInfo{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.tel{
+    display: flex;
+    margin: 0px 25px 0px 0px;
+}
+
+.mail{
+    display: flex;
+    margin: 0px 15px 0px 0px;
+}
+
+.tel p{
+    margin-bottom: 0px !important;
+    margin-left: 5px;
+    font-size: 16px;
+}
+.mail p{
+    margin-bottom: 0px !important;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.topBtn{
+    border: none;
+    height: 50px;
+    background-color: white;
+    padding: 10px 40px;
+    background-color: #E8604C;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-size: 16px;
+}
+
+.navbar {
+    padding: 10px 0px !important;
+    background-color: white !important;
+    box-shadow: rgba(0, 0, 0, 0.039) 0px 10px 15px -3px, rgba(0, 0, 0, 0.021) 0px 4px 6px -2px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.55);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 23px;
+    margin-top: 20px;
+}
+
+.logoImage{
+    width: 225px;
+}
+
+.logIn{
+    display: flex;
+    position: relative;
+}
+
+.logIn:before{
+    content: '';
+    height: 30px;
+    background-color: #39394323;
+    width: 2px;
+    margin: 0px 20px 0px -5px;
+}
+
+.logIn box-icon{
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+
+.logOut{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.logOut:before{
+    content: '';
+    height: 30px;
+    background-color: #39394323;
+    width: 2px;
+    margin: 0px 20px 0px -5px;
+}
+
+.logOut box-icon{
+    margin-right: 8px;
+    margin-top: 2px;
+}
