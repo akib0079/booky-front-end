@@ -13,6 +13,7 @@ import VerfPage from './Pages/VerfPage/VerfPage';
 import RequireAuth from './Pages/LogIn&Register/RequireAuth/RequireAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BookInfo from './Pages/BookInfo/BookInfo';
 
 
 function App() {
@@ -25,13 +26,16 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         {/* <Route path="/verify" element={
-          <RequireAuth>
-          </RequireAuth>
+          
         } /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<VerfPage></VerfPage>} />
-
+        <Route path="/book/:id" element={
+          <RequireAuth>
+            <BookInfo></BookInfo>
+          </RequireAuth>
+        } />
         <Route path="*" element={<Page404 />} />
 
       </Routes>

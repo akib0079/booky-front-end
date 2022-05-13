@@ -75,6 +75,76 @@
     text-transform: uppercase;
 }
 
+/* Items */
+
+.Items{
+    padding: 80px 0px;
+    background-color: #fff8f258;
+}
+
+.Items h2{
+    font-size: 35px;
+    font-weight: 600;
+    color: #202020;
+    text-transform: uppercase;
+}
+
+.books{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    padding: 50px 0px;
+    max-width: 1160px;
+    margin: 0 auto;
+    
+}
+
+
+.book{
+    transition: 0.6s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white ;
+
+}
+
+.book img{
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+}
+
+.book:hover{
+    transform: translateY(-20px);
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+
+.details h4{
+    font-weight: 600;
+    color: #202020;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 27px;
+}
+
+.moreInfo h6{
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #b11d10;
+}
+
+.moreInfoBtn p{
+    color: #0E0E0F;
+    text-decoration: none;
+    font-weight: 500;
+    color: #b11d10;
+}
+
+.moreInfoBtn p:hover{
+    text-decoration: underline;
+}
+
 /* About */
 
 .aboutSec{

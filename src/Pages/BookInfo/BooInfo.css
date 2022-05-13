@@ -1,0 +1,24 @@
+.bookInfoPage{
+    padding: 100px 0px;
+    min-height: 80vh;
+}
+
+.bookImg{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.detailsInner h2{
+    font-weight: 600;
+    color: #393943;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.details h5{
+    font-weight: 500;
+    color: #CB200E;
+}

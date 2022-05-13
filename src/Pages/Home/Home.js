@@ -7,8 +7,23 @@ import icn2 from '../../images/featur2.png';
 import icn3 from '../../images/featur3.png';
 import icn4 from '../../images/featur4.png';
 import { toast, ToastContainer } from 'react-toastify';
+import UsebookData from '../../Hooks/UsebookData';
+import BookLoop from '../Home/BookLoop/BookLoop';
+import { Spinner } from 'react-bootstrap';
 
 const Home = () => {
+
+    const [books, setBooks] = UsebookData([]);
+
+    const requiredBooks = books.slice(0, 6);
+
+    if (requiredBooks >= 0) {
+        return (
+            <div className="spinnerDiv">
+                <Spinner className='spinner' animation="grow" />
+            </div>
+        )
+    }
     return (
         <div className="homePage">
             {/* Horo sec */}
@@ -64,6 +79,34 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* items section */}
+
+            <section className="Items">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="itemsHeader text-center">
+                                <h2>Recently Added Books <br></br> ⦿</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="books">
+                                {
+                                    requiredBooks.map(book => <BookLoop
+                                        key={book._id}
+                                        info={book}
+                                    ></BookLoop>)
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* about Section */}
             <section className="aboutSec">
                 <div className="container">
@@ -82,6 +125,8 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+
 
 
 

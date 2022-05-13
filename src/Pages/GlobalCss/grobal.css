@@ -31,4 +31,11 @@
         box-shadow: 0 0 0 0rem !important;
     }
 
+    .books{
+        display: grid;
+        grid-template-columns: repeat(1,1fr) !important;
+        gap: 40px;
+        padding: 50px 30px !important;
+    }
+
 }  
