@@ -4,6 +4,7 @@ import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './SocialLogIn.css';
 import googleLogo from '../../../images/logoGoogle.png'
+import { toast } from 'react-toastify';
 
 const SocialLogIns = () => {
 
@@ -17,6 +18,7 @@ const SocialLogIns = () => {
 
     if (userGoogle) {
         navigate(from, { replace: true });
+        toast.success(`Welcome ${userGoogle?.user?.email}`);
     }
 
     return (
@@ -25,7 +27,6 @@ const SocialLogIns = () => {
             <button onClick={() => signInWithGoogle()} className='socialLogBtn'>
                 <img className='g_logo' src={googleLogo} alt="" />
                 Continue with Google</button>
-            {/* Facebook SignIn */}
             <p className='text-danger mt-1 mb-0'>{errorGoogle?.message.slice(9)}</p>
             {
                 loadingGoogle ?

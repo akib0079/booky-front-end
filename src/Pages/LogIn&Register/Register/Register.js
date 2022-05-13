@@ -6,6 +6,7 @@ import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateP
 import auth from '../../../firebase.init';
 import SocialLogIns from '../SocialLogIns/SocialLogIns';
 import logo from '../../../images/my-booky logo.png'
+import { toast } from 'react-toastify';
 
 const Register = () => {
     const [c_error, setC_error] = useState();
@@ -38,8 +39,13 @@ const Register = () => {
 
     if (user) {
         nav('/home');
-        console.log(user);
         setC_error('');
+    }
+
+    const notify = () => {
+        if (user) {
+            toast.success(`Welcome ${user?.user?.email}`);
+        }
     }
 
     if (!user?.emailVerified) {
@@ -49,6 +55,8 @@ const Register = () => {
     const navigateLogIn = () => {
         nav('/login');
     }
+
+
 
 
 
@@ -85,7 +93,7 @@ const Register = () => {
                                                 <p className='text-success m-0'></p>
                                         }
                                     </Row>
-                                    <button className='LogInBtn' type='submit'>Register as Customer</button>
+                                    <button onClick={notify()} className='LogInBtn' type='submit'>Register as Customer</button>
                                     <p className='registerP'>Already have an account? <span onClick={navigateLogIn}>LogIn Here.</span></p>
                                 </Form>
 

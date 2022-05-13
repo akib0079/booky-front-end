@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import verifyImg from '../../images/Envelope.gif';
 
@@ -11,6 +12,12 @@ const VerfPage = () => {
     if (user?.emailVerified) {
         nav('/home');
     }
+
+    const notify = () => {
+        if (user) {
+            toast.success(`Welcome ${user?.email}`);
+        }
+    }
     return (
         <div className='page404 d-flex align-items-center'>
             <div className="container p-2 text-center">
@@ -18,7 +25,7 @@ const VerfPage = () => {
                 <h3>Please Check your mail and Verify your mail.</h3>
                 <h4>Didn't recive the mail?"Check Spam"</h4>
                 <a href='/home'>
-                    <button className='AboutBtn mt-3'>
+                    <button onClick={notify()} className='AboutBtn mt-3'>
                         <box-icon name='home' type='solid' color='#fbfbfb' ></box-icon>
                         After verification, Go Home
                     </button>

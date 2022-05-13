@@ -6,14 +6,11 @@ import auth from '../../../firebase.init';
 import SocialLogIns from '../SocialLogIns/SocialLogIns';
 import logo from '../../../images/my-booky logo.png';
 import './Login.css';
-import Header from '../../../Static/Header/Header';
+import { toast, ToastContainer } from 'react-toastify';
 
 const LogIn = () => {
 
     const [c_errors, setC_errors] = useState('');
-
-
-
 
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -43,6 +40,7 @@ const LogIn = () => {
     }
 
     if (user || user?.emailVerified) {
+        toast.success(`Welcome ${user?.user?.email}`);
         navigate(from, { replace: true });
     }
 
@@ -56,6 +54,13 @@ const LogIn = () => {
             alert('Fill up email address')
         }
         await sendPasswordResetEmail(email);
+    }
+
+
+    const notify = () => {
+        if (user) {
+            toast.success(`Welcome ${user?.user?.email}`);
+        }
     }
 
 
@@ -98,7 +103,7 @@ const LogIn = () => {
                                             :
                                             <p className='text-success m-0'></p>
                                     }
-                                    <button className='LogInBtn mt-1' type='submit'>LogIn as Customer</button>
+                                    <button onClick={notify()} className='LogInBtn mt-1' type='submit'>LogIn as Customer</button>
                                     <p className='registerP mb-1'>New to my-booky?
                                         <span onClick={navigateRegister}> Register Here.</span> or
                                         <span className='resetPass' onClick={resetPassword}> Reset Password?</span>

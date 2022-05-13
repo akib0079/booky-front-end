@@ -11,6 +11,8 @@ import Register from './Pages/LogIn&Register/Register/Register';
 import Page404 from './Pages/Page404/Page404';
 import VerfPage from './Pages/VerfPage/VerfPage';
 import RequireAuth from './Pages/LogIn&Register/RequireAuth/RequireAuth';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -22,11 +24,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/verify" element={
+        {/* <Route path="/verify" element={
           <RequireAuth>
-            <VerfPage></VerfPage>
           </RequireAuth>
-        } />
+        } /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<VerfPage></VerfPage>} />
@@ -34,7 +35,7 @@ function App() {
         <Route path="*" element={<Page404 />} />
 
       </Routes>
-
+      <ToastContainer />
       <Footer></Footer>
     </div>
   );
