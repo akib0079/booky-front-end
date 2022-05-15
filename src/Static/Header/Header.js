@@ -28,17 +28,28 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to={'/home'}>Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to={'/about'}>About</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to={'/home#service'}>Explore Packages</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to={'/blog'}>Blog</Link>
-                            </li>
-                            <li className="nav-item">
+                            {
+                                user ?
+                                    <>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to={'/manageinventory'}>Manage books</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to={'/additem'}>Add books</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to={'/myitem'}>My books</Link>
+                                        </li>
+                                    </>
+                                    :
+                                    <>
+                                    </>
 
+                            }
+                            <li className="nav-item">
+                                <Link className="nav-link" to={'/blogs'}>Blog</Link>
+                            </li>
+                            <li className="nav-item">
                                 <div className='verify'>
                                     {user?.email ?
                                         <div className="nav-link logOut">

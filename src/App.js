@@ -16,6 +16,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import BookInfo from './Pages/BookInfo/BookInfo';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import Additem from './Pages/Additem/Additem';
+import MyItems from './Pages/MyItems/MyItems';
+import Blog from './Pages/Blog/Blog';
 
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<VerfPage></VerfPage>} />
+        <Route path="/blogs" element={<Blog></Blog>} />
         <Route path="/book/:id" element={
           <RequireAuth>
             <BookInfo></BookInfo>
@@ -43,6 +46,11 @@ function App() {
         <Route path="/additem" element={
           <RequireAuth>
             <Additem></Additem>
+          </RequireAuth>
+        } />
+        <Route path="/myitem" element={
+          <RequireAuth>
+            <MyItems></MyItems>
           </RequireAuth>
         } />
         <Route path="*" element={<Page404 />} />

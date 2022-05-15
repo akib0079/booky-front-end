@@ -29,7 +29,7 @@ const Additem = () => {
     };
 
 
-    const userName = user?.displayName;
+    const userName = user?.email;
     return (
         <div className='addItemPage'>
             <div className="container">
