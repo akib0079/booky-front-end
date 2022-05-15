@@ -1,0 +1,10 @@
+.addItemPage{
+    min-height: 80vh;
+    padding: 80px 0px;
+}
+
+.addItemForm{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}

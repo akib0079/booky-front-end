@@ -10,10 +10,12 @@ import { toast, ToastContainer } from 'react-toastify';
 import UsebookData from '../../Hooks/UsebookData';
 import BookLoop from '../Home/BookLoop/BookLoop';
 import { Spinner } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
     const [books, setBooks] = UsebookData([]);
+    const nav = useNavigate();
 
     const requiredBooks = books.slice(0, 6);
 
@@ -23,6 +25,13 @@ const Home = () => {
                 <Spinner className='spinner' animation="grow" />
             </div>
         )
+    }
+
+    const navToMange = () => {
+        nav('/manageinventory')
+    }
+    const navToAdd = () => {
+        nav('/additem')
     }
     return (
         <div className="homePage">
@@ -36,12 +45,8 @@ const Home = () => {
                                 <h3>Explore various book from our available stocks</h3>
                                 <hr></hr>
                                 <p>You can manage deliver or supply books from my booky. LogIn or signup while visiting, Hopefully you will be having fun exploring!</p>
-                                <a href="#service">
-                                    <button className='HeroBtn2'>Manage Books</button>
-                                </a>
-                                <a href="#service">
-                                    <button className='HeroBtn ms-2'>Explore all our books</button>
-                                </a>
+                                <button onClick={() => navToMange()} className='HeroBtn2'>Manage  All Books</button>
+                                <button onClick={() => navToAdd()} className='HeroBtn ms-2'>Add Books</button>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -103,6 +108,9 @@ const Home = () => {
                                 }
                             </div>
                         </div>
+                    </div>
+                    <div className="btnMange text-center">
+                        <button onClick={navToMange} className='deliverBtn mt-3'>Manage Inventories</button>
                     </div>
                 </div>
             </section>

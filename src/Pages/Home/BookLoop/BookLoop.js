@@ -21,7 +21,7 @@ const BookLoop = (props) => {
                 <p className='mb-0'>{desc.slice(0, 60)}...</p>
                 <hr></hr>
                 <div className="moreInfoBtn d-flex justify-content-between">
-                    <p onClick={() => navToDetails(_id)}>Manage</p>
+                    <p className='mb-0' onClick={() => navToDetails(_id)}>Update</p>
                     <h6>Supplier : {supplier_name.slice(0, 5)}</h6>
                 </div>
 

@@ -14,6 +14,8 @@ import RequireAuth from './Pages/LogIn&Register/RequireAuth/RequireAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BookInfo from './Pages/BookInfo/BookInfo';
+import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import Additem from './Pages/Additem/Additem';
 
 
 function App() {
@@ -25,15 +27,22 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        {/* <Route path="/verify" element={
-          
-        } /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<VerfPage></VerfPage>} />
         <Route path="/book/:id" element={
           <RequireAuth>
             <BookInfo></BookInfo>
+          </RequireAuth>
+        } />
+        <Route path="/manageinventory" element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+        } />
+        <Route path="/additem" element={
+          <RequireAuth>
+            <Additem></Additem>
           </RequireAuth>
         } />
         <Route path="*" element={<Page404 />} />
