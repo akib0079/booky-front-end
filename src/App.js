@@ -18,6 +18,7 @@ import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import Additem from './Pages/Additem/Additem';
 import MyItems from './Pages/MyItems/MyItems';
 import Blog from './Pages/Blog/Blog';
+import About from './Pages/About/About';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<VerfPage></VerfPage>} />
         <Route path="/blogs" element={<Blog></Blog>} />
+        <Route path="/about" element={<About></About>} />
         <Route path="/book/:id" element={
           <RequireAuth>
             <BookInfo></BookInfo>

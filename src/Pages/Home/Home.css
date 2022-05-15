@@ -178,3 +178,7 @@
     border: none;
     padding: 15px;
 }
+
+.page{
+    min-height: 80vh;
+}
