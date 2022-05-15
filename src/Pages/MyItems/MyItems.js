@@ -13,7 +13,7 @@ const MyItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myitem?s_name=${user?.email}`)
+        fetch(`https://calm-caverns-00395.herokuapp.com/myitem?s_name=${user?.email}`)
             .then(res => res.json())
             .then(bookData => setItems(bookData))
     }, [user]);
