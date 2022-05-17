@@ -27,7 +27,7 @@ const ManageInventory = () => {
                     console.log(data);
                     const remaingBooks = books.filter(book => book._id !== id);
                     setBooks(remaingBooks);
-                    toast.error(`item Deleted`);
+                    toast.error(`Item Deleted`);
 
                 })
         }
@@ -59,13 +59,24 @@ const ManageInventory = () => {
                             {
                                 books.map(book =>
                                     <div className="perItem d-flex align-items-center justify-content-between" key={book._id}>
-                                        <img className='mngImg' src={book.img} alt="" />
-                                        <h4 className='mb-0'>{book.name}</h4>
+                                        <div className="infoMain d-flex align-items-center justify-content-between">
+                                            <img className='mngImg' src={book.img} alt="" />
+                                            <h4 className='mb-0 ms-4'>{book.name}</h4>
+                                        </div>
+                                        <h6 className='mb-0'>Stocks : {book.quantity}</h6>
                                         <div className="btns">
                                             {/* Delete btn */}
-                                            <button onClick={() => handleDelete(book._id)} className='deliverBtn'>Delete</button>
+                                            <button onClick={() => handleDelete(book._id)} className='delBtn'>
+                                                <div className="icon mt-2">
+                                                    <box-icon name='trash' color='#ffffff' ></box-icon>
+                                                </div>
+                                            </button>
 
-                                            <button onClick={() => navToDetails(book._id)} className='addBtn ms-3'>Manage</button>
+                                            <button onClick={() => navToDetails(book._id)} className='updateBtn ms-3'>
+                                                <div className="icon mt-2">
+                                                    <box-icon name='edit' type='solid' color='#ffffff' ></box-icon>
+                                                </div>
+                                            </button>
                                         </div>
                                     </div>)
                             }

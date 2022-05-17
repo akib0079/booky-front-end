@@ -23,10 +23,10 @@ const MyItems = () => {
         nav(`/book/${id}`)
     };
 
-    if (items === 0) {
+    if (items >= 0) {
         return (
             <div className="myItemsPage text-center">
-                <h4>No Items added by {user?.displayName}</h4>
+                <h4>No item was added by {user?.displayName}</h4>
             </div>
         )
     }
@@ -40,14 +40,19 @@ const MyItems = () => {
                             <h2 className='text-center mb-5'>My Books</h2>
                             {
                                 items.map(book =>
+
                                     <div className="perItem d-flex align-items-center justify-content-between" key={book._id}>
                                         <img className='mngImg' src={book.img} alt="" />
                                         <h4 className='mb-0'>{book.name}</h4>
                                         <p className='mb-0'>Available : {book.quantity}</p>
-                                        <div className="btns">
-                                            <button onClick={() => navToDetails(book._id)} className='addBtn ms-3'>Manage</button>
-                                        </div>
-                                    </div>)
+                                        <button onClick={() => navToDetails(book._id)} className='updateBtn ms-3'>
+                                            <div className="icon mt-2">
+                                                <box-icon name='edit' type='solid' color='#ffffff' ></box-icon>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                )
                             }
                         </div>
                     </div>

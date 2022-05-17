@@ -11,3 +11,33 @@
     height: 50px;
     border-radius: 50%;
 }
+
+.updateBtn{
+    background-color: #393943;
+    color: white;
+    border: none;
+    padding: 10px 13px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+.updateBtn:hover{
+    background-color: #ca2516;
+    color: white;
+}
+
+.delBtn{
+    background-color: #ca2516;
+    color: white;
+    border: none;
+    padding: 10px 13px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+.delBtn:hover{
+    background-color: #ca2516;
+    color: white;
+}

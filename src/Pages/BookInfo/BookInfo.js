@@ -77,7 +77,7 @@ const BookInfo = () => {
         })
             .then(res => res.json())
             .then(dataB => {
-                toast.success(`Quantity added for ${book.name}`);
+                toast.success(`${stock} item added for ${book.name}`);
                 setQ(q + parseInt(stock));
             })
     }
